@@ -1,0 +1,33 @@
+{
+  "name": "backbone-model-view",
+  "version": "0.0.0",
+  "description": "Helper to render a view based on a backbone-model.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node bin/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/domachine/backbone-model-view.git"
+  },
+  "keywords": [
+    "backbone",
+    "view",
+    "model",
+    "helper"
+  ],
+  "author": "Dominik Burgdörfer <info@domachine.de>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/domachine/backbone-model-view/issues"
+  },
+  "homepage": "https://github.com/domachine/backbone-model-view",
+  "devDependencies": {
+    "backbone": "^1.1.2",
+    "browserify": "^4.1.11",
+    "chai": "^1.9.1",
+    "mocha-phantomjs": "^3.4.1",
+    "phantomjs": "^1.9.7-9",
+    "shelljs": "^0.3.0"
+  }
+}
