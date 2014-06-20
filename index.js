@@ -40,8 +40,7 @@ BackboneModelView.prototype._mapElement = function(el, attr, fn) {
   var property = el.getAttribute(attr);
   var model = this.model;
   var changed = (
-    model.changedAttributes() === false ||
-      this.initial ||
+    this.initial ||
       model.changedAttributes()[property]
   );
 
