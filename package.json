@@ -1,6 +1,6 @@
 {
   "name": "backbone-model-view",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Helper to render a view based on a backbone-model.",
   "main": "index.js",
   "scripts": {
