@@ -29,10 +29,11 @@ var MyView = Backbone.View.extend({
 
   initialize: function() {
     this.el.innerHTML = this.template;
+    this.view = View(this.el, this.model);
   }
 
   render: function() {
-    View(this.el, this.model)
+    this.view
       .map('data-text', function(el, name, value) {
         el.textContent = value;
       });
