@@ -11,6 +11,7 @@ function BackboneModelView(el, model, ctx) {
   this.el = el;
   this.model = model;
   this.ctx = ctx || this;
+  this.initial = true;
 };
 
 //
@@ -40,10 +41,12 @@ BackboneModelView.prototype._mapElement = function(el, attr, fn) {
   var model = this.model;
   var changed = (
     model.changedAttributes() === false ||
+      this.initial ||
       model.changedAttributes()[property]
   );
 
   if (changed) {
     fn.call(this.ctx, el, property, this.model.get(property));
+    this.initial = false;
   }
 };
