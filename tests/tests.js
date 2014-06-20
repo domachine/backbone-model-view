@@ -62,8 +62,9 @@ describe('BackboneModelView', function() {
         content: 'Content-text'
       });
       model.set('title', 'Title-text');
-      View(el, model)
-        .map('data-text', function(el, name, value) {
+      view = View(el, model)
+      view.initial = false;
+      view.map('data-text', function(el, name, value) {
           el.textContent = value;
         });
       el.querySelector('span[data-text="title"]')

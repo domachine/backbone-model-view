@@ -46,6 +46,8 @@ BackboneModelView.prototype._mapElement = function(el, attr, fn) {
 
   if (changed) {
     fn.call(this.ctx, el, property, this.model.get(property));
-    this.initial = false;
+    setTimeout(function() {
+      this.initial = false;
+    }, 0);
   }
 };
